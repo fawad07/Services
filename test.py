@@ -4,7 +4,7 @@
 # In[ ]:
 
 
-from flask import Flask, render_template, request, send_file, redirect, url_for
+from flask import Flask, render_template, request, send_file, redirect, url_for, jsonify
 import cv2
 import os
 import rembg
@@ -120,23 +120,25 @@ def upload():
         return 'Error processing uploaded image'
     
 
-@app.route('/convert', methods=['POST'])
+@app.route("/convert", methods=["POST"])
 def convert():
-    youtube_url = request.form.get('youtube_url')
-     # Check if youtube_url is empty or not provided
+    youtube_url = request.form.get("youtube_url")
+    # Check if youtube_url is empty or not provided
     if not youtube_url:
-        return 'Error: YouTube URL is missing or empty'
+        # return 'Error: YouTube URL is missing or empty'
+        return jsonify({"error": "YouTube URL is missing or empty"}), 400
     if is_youtube_url(youtube_url):
-        print ("VALID")
+        download_youtube_audio(youtube_url)
+        print("VALID")
     else:
         print("Invalad url")
-    
+
     # Process the YouTube URL, e.g., perform conversion to MP3
     # Add your logic here based on what you want to do with the URL
     # For now, let's just print it
     print(f"Received YouTube URL: {youtube_url}")
     # Redirect back to the homepage or another page after processing
-    return "Under construction"        #redirect(url_for('index.html'))
+    return "Under construction"  # redirect(url_for('index.html'))
 
 
 # In[ ]:
