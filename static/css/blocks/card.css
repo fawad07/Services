@@ -1,0 +1,73 @@
+.card {
+	max-width: 350px;
+	margin: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #14213D;
+    text-align: left;
+}
+
+.card__title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffff13;
+}
+
+.card__custom-file-upload {
+	width: 175px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    background-color: #ffff13;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card__custom-file-upload:hover {
+    background-color: #A4A400;
+}
+
+.fileUpload {
+    display: block;
+}
+
+.card__bk-remover,
+.card__utube-convert {
+  width: calc(50% - 10px); /* Set width for each card */
+ margin-top: 10px; 
+  padding: 20px; /* Add padding to each card */
+  border: 1px solid #ccc; /* Add border for visualization */
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.card__url-input {
+    margin: 30px 0 0 0;
+    border: 1px solid #ccc; /* Add border for visualization */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.card__convert-btn {
+    	/*color: #000000;*/
+	text-decoration: none;
+	padding: 5px 5px 5px 5px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	border: 2px solid #ffff13;
+	background-color: #14213d;
+	border-radius: 10px;
+	color: #ffff13;
+	transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card__convert-btn:hover {
+    color: #000000;
+	font-size: 25px;
+	box-shadow: 0 0 10px rgba(210, 110, 130, 0.5);
+  	background-color: #ffff13;
+  	border-radius: 10px;
+}

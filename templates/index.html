@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Muhammad Fawad Aleem" />
+		<meta name="description" content="2-Service WEBSITE" />
+		<meta name="keywords" content="Software Engineer, Web developer, AI" />
+		<title>Image Background Remover</title>
+<!--Style sheet and icon link -->
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" href="../static/css/pages/index.css" />
+	</head>
+	<body class="page">
+		<div class="page__content">
+			<header class="header">
+				<nav class="nav">
+					<img
+						src="../static/images/Image_Background_remover.png"
+						alt="Logo goes here"
+						class="nav__logo"
+					/>
+					<ul class="nav__links">
+						<li><a href="#" class="nav__link">link 1</a></li>
+						<li><a href="#" class="nav__link">link 2</a></li>
+						<li><a href="#" class="nav__link">link 3</a></li>
+					</ul>
+				</nav>
+			</header>
+			<h1>SERVICES</h1>
+			<main class="content">
+				<div class="card__bk-remover">
+					<h1 class="card__title">
+						Background Remover
+					</h1>
+					<label class="card__custom-file-upload">
+					<!--	<input type="file" class="fileUpload" id="js-file-upload"/>	-->
+						<!-- Choose File input box -->
+						<form action="/upload" method="post" enctype="multipart/form-data">
+							<input type="file" name="file">
+							<button class="card__convert-btn" 
+									id="js-convert-btn" 
+									type="submit" 
+									value="Upload">
+									Upload
+							</button>
+						</form>
+					</label>
+				</div>
+
+				<form class="card__utube-convert"
+					 id="yt-to-mp3-form" 
+					 action="/convert" 
+					 method="POST">
+					<h1 class="card__title">YouTube to MP3 converter (Under Constructotion)</h1>
+					<label class="card__youtube-link">
+						<input
+							type="text"
+							class="card__url-input"
+							id="js-yt-url-input"
+							name="youtube_url"
+							placeholder="Enter YouTube URL"
+						/>
+					</label>
+					 <button type="submit" class="card__convert-btn">Convert</button>
+				</form>
+			</main>
+
+			<footer class="footer">
+				<p class="footer__copyright">&copy; Muhammad Fawad Aleem</p>
+			</footer>
+		</div>
+
+		<!--	<script src="../static/js/index.js"></script> -->
+	</body>
+</html>

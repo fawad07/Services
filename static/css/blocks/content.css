@@ -1,0 +1,7 @@
+.content {
+	width: 800px;
+	display: flex; /* Use Flexbox */
+  	justify-content: space-between;/* Distribute items along the main axis */
+	  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+

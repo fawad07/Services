@@ -1,0 +1,9 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 72px;
+  max-height: 80px;
+  padding: 30px 80px 30px;
+  border-bottom: 5px solid #ffff13;
+}
